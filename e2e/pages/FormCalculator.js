@@ -17,6 +17,7 @@ class FormCalculator extends Page {
     }
     
     selectOperator(operator) {
+        this.operatorSelect.click();
         return element(by.css("option[value = "+ `${operator}` + "]")).click();
     }
 }

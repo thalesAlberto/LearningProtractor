@@ -11,7 +11,6 @@ describe('Testando a funcionalidade das operações matemáticas', () => {
     beforeEach(() => {
         FormCalculator.firstCamp.sendKeys(12);
         FormCalculator.secondCamp.sendKeys(4);
-        FormCalculator.operatorSelect.click();
     });
 
     it('Deve retornar um valor correto na soma de dois inteiros', () => {

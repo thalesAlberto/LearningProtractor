@@ -3,7 +3,7 @@ require('babel-register')
 exports.config = {
     framework: 'jasmine',
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['specs/specs/*.spec.js'],
+    specs: ['e2e/specs/*.spec.js'],
     
     onPrepare: function () {
         /**
