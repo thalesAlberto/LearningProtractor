@@ -7,18 +7,23 @@ class FormCalculator extends Page {
     get operatorSelect() { return element(by.model('operator')) };
     get button() { return element(by.id('gobutton')) };
     get result() { return element(by.css('h2[class="ng-binding"]')).getText() };
-        
+
     open() {
         super.open('http://juliemr.github.io/protractor-demo/');
     }
-    
+
     submit() {
         this.button.click();
     }
-    
+
+    fillForms(firstNumber, secondNumber) {
+        this.firstCamp.sendKeys(firstNumber);
+        this.secondCamp.sendKeys(secondNumber);
+    }
+
     selectOperator(operator) {
         this.operatorSelect.click();
-        return element(by.css("option[value = "+ `${operator}` + "]")).click();
+        return element(by.css("option[value = " + `${operator}` + "]")).click();
     }
 }
 

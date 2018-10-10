@@ -9,31 +9,30 @@ describe('Testando a funcionalidade das operações matemáticas', () => {
 
     //Setando Valores e preparando para mudança de operação
     beforeEach(() => {
-        FormCalculator.firstCamp.sendKeys(12);
-        FormCalculator.secondCamp.sendKeys(4);
+        FormCalculator.fillForms(15 , 3)
     });
 
     it('Deve retornar um valor correto na soma de dois inteiros', () => {
         FormCalculator.submit();
-        expect(FormCalculator.result).toEqual('16');
+        expect(FormCalculator.result).toEqual('18');
     });
 
     it('Deve retornar um valor correto na subtração de dois inteiros', () => {
         FormCalculator.selectOperator("SUBTRACTION");
         FormCalculator.submit();
-        expect(FormCalculator.result).toEqual('8');
+        expect(FormCalculator.result).toEqual('12');
     });
 
     it('Deve retornar um valor correto na multiplicação de dois inteiros', () => {
         FormCalculator.selectOperator("MULTIPLICATION");
         FormCalculator.submit();
-        expect(FormCalculator.result).toEqual('48');
+        expect(FormCalculator.result).toEqual('45');
     });
 
     it('Deve retornar um valor correto na divisão de dois inteiros', () => {
         FormCalculator.selectOperator("DIVISION");
         FormCalculator.submit();
-        expect(FormCalculator.result).toEqual('3');
+        expect(FormCalculator.result).toEqual('5');
     });
 
     it('Deve retornar um valor correto no resto de divisão de dois inteiros', () => {
